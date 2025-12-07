@@ -195,7 +195,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
 static void mqtt_app_start(void) {
     esp_mqtt_client_config_t mqtt_cfg = {
-        .broker.address.uri = "mqtt://18.116.199.169:1883",
+        .broker.address.uri = "mqtt://18.221.66.109:1883",
         .credentials.username = "esp32",
         .credentials.authentication.password = "password",
     };
@@ -406,4 +406,5 @@ void app_main(void)
     // Crea la tarea para cambiar el color del LED y publicar en MQTT
     xTaskCreate(led_task, "led_task", 4096, NULL, 5, NULL);
 }
+
 
