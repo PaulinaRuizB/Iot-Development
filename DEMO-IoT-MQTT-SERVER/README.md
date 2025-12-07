@@ -18,7 +18,7 @@ This setup includes:
 
 ---
 
-# 🖥️ **1. Server Setup (Ubuntu 22.04 on AWS EC2)**
+# **1. Server Setup (Ubuntu 22.04 on AWS EC2)**
 
 Update packages:
 
@@ -193,4 +193,5 @@ You should see the full dark dashboard with:
 ```
 [Web Dashboard] → MQTT via WebSockets → [Mosquitto Broker] → ESP32 → LED
 ```
+<img width="1366" height="611" alt="image" src="https://github.com/user-attachments/assets/f7be6d1e-51c6-440f-9d98-ac75779fea9d" />
 
