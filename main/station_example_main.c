@@ -197,7 +197,7 @@ static void mqtt_app_start(void) {
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = "mqtt://18.116.199.169:1883",
         .credentials.username = "esp32",
-        .credentials.authentication.password = "Jenir263*",
+        .credentials.authentication.password = "password",
     };
     mqtt_client = esp_mqtt_client_init(&mqtt_cfg);
     esp_mqtt_client_register_event(mqtt_client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
@@ -209,8 +209,8 @@ static void mqtt_app_start(void) {
    If you'd rather not, just change the below entries to strings with
    the config you want - ie #define EXAMPLE_WIFI_SSID "mywifissid"
 */
-#define EXAMPLE_ESP_WIFI_SSID      "JENNIFER"
-#define EXAMPLE_ESP_WIFI_PASS      "28862008"
+#define EXAMPLE_ESP_WIFI_SSID      "WIFI NAME"
+#define EXAMPLE_ESP_WIFI_PASS      "PASSWORD"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  CONFIG_ESP_MAXIMUM_RETRY
 
 #if CONFIG_ESP_STATION_EXAMPLE_WPA3_SAE_PWE_HUNT_AND_PECK
@@ -406,3 +406,4 @@ void app_main(void)
     // Crea la tarea para cambiar el color del LED y publicar en MQTT
     xTaskCreate(led_task, "led_task", 4096, NULL, 5, NULL);
 }
+
